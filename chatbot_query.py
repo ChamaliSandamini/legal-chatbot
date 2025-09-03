@@ -3,8 +3,10 @@ import json
 import pickle
 import faiss
 import numpy as np
+import os
+api_key = os.getenv("OPENAI_API_KEY")
 from openai import OpenAI
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
