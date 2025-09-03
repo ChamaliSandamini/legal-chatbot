@@ -88,14 +88,15 @@ Answer clearly, with references:
 
 
 # --- Main loop ---
-print("🤖 Legal Chatbot ready! Type 'exit' to quit.")
-while True:
-    user_input = input("You: ")
-    if user_input.lower() in ["exit", "quit"]:
-        print("Chatbot: Goodbye!")
-        break
-    try:
-        answer = answer_question(user_input)
-        print("Chatbot:", answer)
-    except Exception as e:
-        print("Error:", e)
+if __name__ == "__main__": 
+    print("🤖 Legal Chatbot ready! Type 'exit' to quit.")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() in ["exit", "quit"]:
+            print("Chatbot: Goodbye!")
+            break
+        try:
+            answer = answer_question(user_input)
+            print("Chatbot:", answer)
+        except Exception as e:
+            print("Error:", e)
